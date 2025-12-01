@@ -36,10 +36,17 @@ jobs:
         env:
           NODE_ENV: production
 
+      - name: Move output to ishanportfolio subfolder
+        run: |
+          mkdir -p deploy/ishanportfolio
+          shopt -s dotglob
+          mv out/* deploy/ishanportfolio/
+          touch deploy/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./deploy
 
   deploy:
     environment:
