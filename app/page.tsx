@@ -1,13 +1,15 @@
-// Import statements and other code...
+import React from 'react';
 
-const GetInTouchSection = () => {
-  return (
-    <section>
-      <h2>Get in Touch</h2>
-      {/* Other contact methods... */}
-      <p>Phone: available upon request</p>
-    </section>
-  );
+const Contact = () => {
+    return (
+        <div>
+            <h2>Contact Information</h2>
+            <p>Email: example@example.com</p>
+            <p>Address: 1234 Main St, Anytown, USA</p>
+            {/* Removed the phone row */}
+            {/* <p>Phone: available upon request</p> */}
+        </div>
+    );
 };
 
-// Other components and export statement...
+export default Contact;
